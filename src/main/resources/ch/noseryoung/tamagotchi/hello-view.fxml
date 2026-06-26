@@ -14,7 +14,7 @@
     <center>
         <HBox prefHeight="220.0" spacing="14.0">
 
-            <!-- Sprite area: background image with a night overlay on top, toggled from code -->
+
             <StackPane prefWidth="280.0" HBox.hgrow="ALWAYS">
                 <VBox fx:id="petbg" alignment="TOP_CENTER" prefHeight="216.0" prefWidth="273.0" styleClass="sprite-box">
                     <ImageView fx:id="petImageView" fitHeight="160.0" fitWidth="160.0" preserveRatio="true" VBox.vgrow="ALWAYS">
@@ -26,11 +26,11 @@
                         </image>
                     </ImageView>
                 </VBox>
-                <!-- Sits directly on top of petbg; visible only while sleeping (toggled in PetController) -->
+
                 <Pane fx:id="nightOverlay" mouseTransparent="true" styleClass="night-overlay" visible="false" />
             </StackPane>
 
-            <!-- Stat column -->
+
             <VBox prefWidth="150.0" styleClass="stat-column">
                 <Label fx:id="energyLabel" alignment="CENTER" maxWidth="Infinity" styleClass="stat-box" text="energy&#10;100/100" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
                 <Label fx:id="appetiteLabel" alignment="CENTER" maxWidth="Infinity" styleClass="stat-box" text="appetite&#10;100/100" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
