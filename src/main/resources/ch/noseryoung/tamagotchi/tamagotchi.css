@@ -1,0 +1,101 @@
+/* ============================================
+   Tamagotchi App Stylesheet
+   Cute / playful / pastel theme
+   ============================================ */
+
+.root {
+    -fx-background-color: #FFF6EE;
+    -fx-font-family: "Comic Sans MS", "Verdana", sans-serif;
+}
+
+.label {
+    -fx-text-fill: #5C4B51;
+    -fx-font-size: 14px;
+}
+
+
+.stat-box {
+    -fx-background-color: #B8E3D1;
+    -fx-background-radius: 18;
+    -fx-border-color: #5C4B51;
+    -fx-border-radius: 18;
+    -fx-border-width: 2.5;
+    -fx-padding: 10;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.stat-column {
+    -fx-spacing: 10;
+    -fx-padding: 4;
+}
+
+/* ---------- The sprite/mood area ---------- */
+
+.sprite-box {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20;
+    -fx-border-color: #FFB5C0;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    -fx-background-color: #FFB5C0;
+    -fx-text-fill: #5C4B51;
+    -fx-font-family: "Comic Sans MS", "Verdana", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #5C4B51;
+    -fx-border-width: 2;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #FFC9D2;
+}
+
+.button:pressed {
+    -fx-background-color: #F7A0AD;
+}
+
+.button:disabled {
+    -fx-background-color: #E8DCD8;
+    -fx-text-fill: #B0A3A8;
+    -fx-border-color: #B0A3A8;
+    -fx-opacity: 1.0; /* override default dimming so our own disabled colors show clearly */
+}
+
+
+.slot-symbol {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-border-color: #FFD97D;
+    -fx-border-radius: 12;
+    -fx-border-width: 3;
+    -fx-font-size: 40px;
+    -fx-alignment: center;
+}
+
+.result-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5C4B51;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5C4B51;
+}
+
+.night-overlay {
+    -fx-background-color: rgba(30, 50, 110, 0.4);
+    -fx-background-radius: 24;
+}

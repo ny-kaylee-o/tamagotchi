@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="340.0" prefWidth="460.0" stylesheets="@tamagotchi.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.noseryoung.tamagotchi.PetController">
+
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+
+    <center>
+        <HBox prefHeight="220.0" spacing="14.0">
+
+            <!-- Sprite area: background image with a night overlay on top, toggled from code -->
+            <StackPane prefWidth="280.0" HBox.hgrow="ALWAYS">
+                <VBox fx:id="petbg" alignment="TOP_CENTER" prefHeight="216.0" prefWidth="273.0" styleClass="sprite-box">
+                    <ImageView fx:id="petImageView" fitHeight="160.0" fitWidth="160.0" preserveRatio="true" VBox.vgrow="ALWAYS">
+                        <VBox.margin>
+                            <Insets top="24.0" />
+                        </VBox.margin>
+                        <image>
+                            <Image url="@../../../sprites/durr_neutral.png" />
+                        </image>
+                    </ImageView>
+                </VBox>
+                <!-- Sits directly on top of petbg; visible only while sleeping (toggled in PetController) -->
+                <Pane fx:id="nightOverlay" mouseTransparent="true" styleClass="night-overlay" visible="false" />
+            </StackPane>
+
+            <!-- Stat column -->
+            <VBox prefWidth="150.0" styleClass="stat-column">
+                <Label fx:id="energyLabel" alignment="CENTER" maxWidth="Infinity" styleClass="stat-box" text="energy&#10;100/100" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                <Label fx:id="appetiteLabel" alignment="CENTER" maxWidth="Infinity" styleClass="stat-box" text="appetite&#10;100/100" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                <Label fx:id="happinessLabel" alignment="CENTER" maxWidth="Infinity" styleClass="stat-box" text="happiness&#10;100/100" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            </VBox>
+
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="14.0" top="18.0" />
+            </padding>
+            <children>
+                <Button fx:id="feedButton" mnemonicParsing="false" onAction="#onFeedButtonClick" text="feed" />
+                <Button fx:id="sleepButton" mnemonicParsing="false" onAction="#onSleepButtonClick" text="rest" />
+                <Button fx:id="slotsButton" mnemonicParsing="false" onAction="#onSlotsButtonClick" text="slots" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

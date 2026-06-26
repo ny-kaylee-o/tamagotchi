@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@tamagotchi.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.noseryoung.tamagotchi.PetGameController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="meow" />
+
+    <HBox alignment="CENTER" spacing="15.0">
+        <Label fx:id="slot1" alignment="CENTER" prefWidth="70.0" style="-fx-font-size: 48;" text="?" />
+        <Label fx:id="slot2" alignment="CENTER" prefWidth="70.0" style="-fx-font-size: 48;" text="?" />
+        <Label fx:id="slot3" alignment="CENTER" prefWidth="70.0" style="-fx-font-size: 48;" text="?" />
+    </HBox>
+
+    <Label fx:id="resultLabel" style="-fx-font-size: 16;" text="cost: 10 energy per spin" />
+
+    <Button fx:id="gamble" onAction="#onSpinButtonClick" prefHeight="46.0" prefWidth="153.0" text="GAMBLE!!!!!!!" />
+
+</VBox>
