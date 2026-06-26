@@ -48,7 +48,6 @@ public class PetController {
 
     private boolean sleeping = false;
 
-    // How fast stats change. Change these numbers to make the game easier or harder.
     private static final double TICK_SECONDS = 5;
     private static final int ENERGY_DECAY = 3;
     private static final int APPETITE_DECAY = 2;
@@ -60,7 +59,6 @@ public class PetController {
 
     @FXML
     public void initialize() {
-        // Every few seconds, runTasks() runs by itself, even with no button clicks.
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(TICK_SECONDS), event -> runTasks())
         );
@@ -70,7 +68,6 @@ public class PetController {
         updateGUI();
     }
 
-    // Runs automatically on a timer. Makes stats change over time.
     private void runTasks() {
         if (sleeping) {
             pet.increaseEnergy(SLEEP_ENERGY_GAIN);
@@ -126,7 +123,7 @@ public class PetController {
             popup.initModality(Modality.APPLICATION_MODAL);
             popup.showAndWait(); // waits here until the popup is closed
 
-            updateGUI(); // stats may have changed inside the popup, so refresh
+            updateGUI();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -139,9 +136,8 @@ public class PetController {
         updateSprite();
     }
 
-    // Picks which picture to show, based on the pet's current stats.
     private void updateSprite() {
-        String fileName = "durr_neutral.png"; // default picture if nothing else matches
+        String fileName = "durr_neutral.png";
 
         if (sleeping) {
             fileName = "durr_sleep.png";

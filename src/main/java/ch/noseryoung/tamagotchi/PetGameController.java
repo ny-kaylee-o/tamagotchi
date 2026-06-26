@@ -23,7 +23,7 @@ public class PetGameController {
 
     private final PetGame game = new PetGame();
 
-    private Pet pet; // injected by PetController before the window is shown
+    private Pet pet;
 
     public void setPet(Pet pet) {
         this.pet = pet;
@@ -43,7 +43,7 @@ public class PetGameController {
         slot2.setText(game.getSymbol2());
         slot3.setText(game.getSymbol3());
 
-        pet.decreaseEnergy(10); // every spin costs energy
+        pet.decreaseEnergy(10);
 
         if (outcome == PetGame.BIG_WIN) {
             pet.increaseHappiness(75);
